@@ -1,17 +1,29 @@
+import { Box, TextField } from '@mui/material';
 import React from 'react'
 
 function MessageList({messages}) {
     if(messages.autor !== "" && messages.text !== ""){
-        return ( <div>
+        return ( 
+
+            <div >
             {messages.map((item, index) => {
-                const cln = "autor border border-2 text-black-50 bg-light"
-                return <div className='comments border border-success p-2 mb-2 mt-3' key={index}>
-                    <div className={item.autor === "Robot"? (cln + " text-end badge"):cln}>{item.autor}</div>
-                    <span>{item.text}</span><br/></div>
+                return  <TextField
+                        style={{    display: 'flex',
+                                    flexDirection: 'column',
+                                    margin: "20px",
+                                }}
+                        margin='dense'
+                        key={index}
+                        label={item.autor}
+                        type="text"
+                        fullWidth
+                        value={item.text}
+                        />
+
             })}
             </div> );
     }
-    return undefined
+
     
 }
 

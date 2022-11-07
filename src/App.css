@@ -1,17 +1,8 @@
-body{
-  display: flex;
-  justify-content: center;
-}
-
-#root{
-  width: 1400px;
-}
-
 .comments{
   display: flex;
   flex-direction: column;
 }
-/* 
-.autor{
-  text-align: right;
-} */
+ .App{
+  display: grid;
+  grid-template-columns:  300px 1fr 300px
+ }
