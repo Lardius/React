@@ -18,7 +18,6 @@ useEffect(()=>{
     if(messageList.length !== 0 && messageList[messageList.length -1].autor !== "Robot")
     {setMessageList(prestate => [...prestate, DescrRobot])}
   }, 3000);
-console.log("rend")
 }, [messageList] )
 
   return (
